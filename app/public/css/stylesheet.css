@@ -24,15 +24,21 @@ h1  {
 
 #Intro {
   font-weight:bold;
-  font-size: 16px;
-  text-align: center;
+  font-size: 20px;
+	text-align: center;
+	font-style: italic;
 }
 
 .nav {
-  background-color: #F4F5F6;
+  background-color: darkgray;
+	padding-bottom: 10px;
 }
 
 a {
-  color: green;
+  color: White;
   font-size: 20px;
+}
+
+.card {
+	margin: 25px;
 }
