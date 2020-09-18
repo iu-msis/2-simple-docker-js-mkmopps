@@ -22,7 +22,7 @@ var app = new Vue({
         console.log(userData);
         this.userName = userData.name.first + " " + userData.name.last;
         this.userEmail = userData.email;
-        this.userBirthdate = userData.dob.date;
+        this.userBirthdate = userData.dob.date.substring(5,10) + "-" + userData.dob.date.substring(0,4);
         this.userAge = userData.dob.age;
         this.userCountry = userData.location.country;
         this.userImgLarge = userData.picture.large;

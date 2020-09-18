@@ -7,7 +7,7 @@ body {
 	font: sans-serif;
 	line-height: 1.88889;
 	color: #555753;
-	background-color: lightgray;
+	background-color: lightblue;
 	margin: 0;
 	padding: 0;
   font-size: 20px;
@@ -86,4 +86,12 @@ thead {
 	color: white;
 	font-size: 20px;
 	font-weight: bold;
+}
+
+.container{
+	background-color: white;
+}
+
+a[href^="mailto:"]{
+  color: #555753;
 }
