@@ -1,18 +1,19 @@
 var app = new Vue({
   el: '#userProfile',
   data: {
-    userName:'',
-    userEmail:'',
-    userBirthdate:'',
-    userAge:'',
-    userCountry:'',
-    userImgLarge:'',
-    userImgThumb:''
-
+    userInfo: {
+      userName:'',
+      userEmail:'',
+      userBirthdate:'',
+      userAge:'',
+      userCountry:'',
+      userImgLarge:'',
+      userImgThumb:''
+    },
   },
   created(){
     this.fetchUser();
-  },
+  }
   methods:{
     fetchUser: function() {
       fetch('https://randomuser.me/api/')
@@ -28,6 +29,7 @@ var app = new Vue({
         this.userImgLarge = userData.picture.large;
         this.userImgThumb = userData.picture.thumbnail;
       })
+    },
     },
   },
 })

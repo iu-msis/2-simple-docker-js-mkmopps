@@ -26,22 +26,32 @@
       </div>
       <br>
  <div class="col-10">
-   <a v-bind:href="userImgLarge">
-     <img v-bind:src="userImgThumb">
-   </a>
-   <br>
-<br>
-        <h2>Hello, my name is {{userName}}.</h2>
-
-<br>
-        <p><a href="mailto:{{userEmail}}">Email: {{userEmail}}</a></p>
-        <p> Birthday: {{userBirthdate}}</p>
-        <p> Country of Origin: {{userCountry}}</p>
-        <p> Age: {{userAge}} years old</p>
-<br>
-        <p> I try to live my life to the fullest. If this is something you also live by, send me an email.</p>
-<br>
-        <p class="text-center">Together, we can capture the dream.</p>
+<form v-on:submit.prevent="fetchUser">
+    <a v-bind:href="userImgLarge">
+      <img v-bind:src="userImgThumb">
+      </a>
+      <br>
+          <div class="form-group row">
+            <label for="staticName">Hello, my name is {{userName}}.</label>
+          </div>
+          <div class="form-group row">
+            <label for="staticEmail"><a href="mailto:{{userEmail}}">Email: {{userEmail}}</a></label>
+          </div>
+          <div class="form-group row">
+            <label for="staticBirthday">Birthday: {{userBirthdate}}</label>
+          </div>
+          <div class="form-group row">
+            <label for="staticCountry">Country of Origin: {{userCountry}}</label>
+          </div>
+          <div class="form-group row">
+            <label for="staticAge">Age: {{userAge}} years old</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+        <br>
+          <p> I try to live my life to the fullest. If this is something you also live by, send me an email.</p>
+        <br>
+          <p class="text-center">Together, we can capture the dream.</p>
       </div>
     <div class="col">
 </div>
