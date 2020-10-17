@@ -9,12 +9,12 @@ var app = new Vue({
       userCountry:'',
       userImgLarge:'',
       userImgThumb:''
-    },
   },
   created(){
     this.fetchUser();
-  }
-  methods:{
+  },
+
+  methods: {
     fetchUser: function() {
       fetch('https://randomuser.me/api/')
       .then(response => response.json())
@@ -30,6 +30,6 @@ var app = new Vue({
         this.userImgThumb = userData.picture.thumbnail;
       })
     },
-    },
-  },
+    }
+  }
 })

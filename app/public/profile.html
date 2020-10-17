@@ -18,14 +18,13 @@
   </li>
 </ul>
 <body>
-  <div id='userProfile'>
   <h1>Profiles</h1>
 <br>
     <div class="row">
       <div class="col">
       </div>
       <br>
- <div class="col-10">
+ <div class="col-10" id='userProfile'>
 <form v-on:submit.prevent="fetchUser">
     <a v-bind:href="userImgLarge">
       <img v-bind:src="userImgThumb">
@@ -56,11 +55,10 @@
     <div class="col">
 </div>
 </div>
+</div>
 <br>
 <br>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 <script src="js/profile.app.js"></script>
-</div>
-</div>
 </body>
 </html>
