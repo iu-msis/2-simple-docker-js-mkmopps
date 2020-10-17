@@ -251,9 +251,11 @@
       <th scope="col">Comment</th>
     </tr>
   </thead>
-  <tbody id="commentTableBody" v-for="Comments in msis">
-    <td>{{Comments.id}}</td>
-    <td>{{Comments.commentText}}</td>
+  <tbody class="comments" id="commentTableBody">
+    <tr v-for="comment in comments">
+    <td class="id">{{comment.id}}</td>
+    <td class="commentText">{{comment.commentText}}</td>
+  </tr>
   </tbody>
 </table>
 </div>
@@ -263,7 +265,7 @@
     <label for="commentText">New Comment</label>
     <textarea class="form-control" id="commentText" rows="3"></textarea>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary" id="submitNewComment">Submit</button>
 </form>
 </div>
 
@@ -272,8 +274,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
 <script src="js/tablesort.min.js"></script>
+<script src="js/comments.app.js"></script>
 <script>
  //Tablesort plugin from http://tristen.ca/tablesort/demo/
   new Tablesort(document.getElementById('booklist'));
