@@ -95,3 +95,7 @@ thead {
 a[href^="mailto:"]{
   color: #555753;
 }
+
+#commentTable{
+	background-color: white;
+}
