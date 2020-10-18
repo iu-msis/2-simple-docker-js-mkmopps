@@ -260,10 +260,10 @@
 </table>
 </div>
 
-<form id="newCommentForm" class="col-6" style="float: right;">
-  <div class="form-group">
+<form id="newCommentForm" class="col-6" style="float: right;" v-on:submit.prevent="createComment()">
+  <div class="form-group comments">
     <label for="commentText">New Comment</label>
-    <textarea class="form-control" id="commentText" rows="3"></textarea>
+    <textarea class="form-control" v-model="newComment.commentText" id="commentText" rows="3"></textarea>
   </div>
   <button type="submit" class="btn btn-primary" id="submitNewComment">Submit</button>
 </form>
