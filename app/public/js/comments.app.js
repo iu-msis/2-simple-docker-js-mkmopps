@@ -1,5 +1,5 @@
 var app = new Vue({
-  el: '#commentTableBody',
+  el: '#commentPostings',
   data: {
     comments: [{
       id:'',
@@ -19,8 +19,8 @@ var app = new Vue({
         console.log(this.comments);
       });
     },
+
     createComment(){
-      this.newComment.id = 
       fetch('api/comments/create.php', {
         method: 'POST',
         body: JSON.stringify(this.newComment),
