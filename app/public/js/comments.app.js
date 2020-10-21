@@ -16,7 +16,7 @@ var app = new Vue({
       .then(response => response.json())
       .then(json => {
         this.comments=json;
-        console.log(this.comments);
+        console.log(json);
       });
     },
 
@@ -30,12 +30,18 @@ var app = new Vue({
       })
       .then(response => response.json())
       .then(json => {
-        console.log("Returned from post", json)
-        this.comments.push(json[0]);
+        console.log("Returned from post:", json);
+        this.comments = json;
         this.newComment = this.newCommentData();
       });
+
       console.log("Creating (POSTing)...!");
       console.log(this.newComment);
+
+      console.log("Form submitted!");
+
+
+
       },
       newCommentData(){
         return {
